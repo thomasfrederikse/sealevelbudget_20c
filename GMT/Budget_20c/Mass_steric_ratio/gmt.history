@@ -1,0 +1,11 @@
+# GMT 6 Session common arguments shelf
+BEGIN GMT 6.1.0
+B	WeSn+tNo TWSx20g20y0.3g0.3
+J	X
+JX	X3.2c/2.5c
+R	0/1/-0.5/5.5
+X	6.9c
+Y	0.75c
+@G	20 0.3
+@L	45
+END

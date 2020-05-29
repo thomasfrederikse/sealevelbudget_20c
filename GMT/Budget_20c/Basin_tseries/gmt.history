@@ -1,0 +1,11 @@
+# GMT 6 Session common arguments shelf
+BEGIN GMT 6.1.0
+B	x25g12.5y100g50weSn+tNorthwest Pacific (13.9%)
+J	X
+JX	X16.2c/0.3c
+R	0/0.81/0/1
+X	-11.1c
+Y	-0.75c
+@G	12.5 50
+@L	103
+END
