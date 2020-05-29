@@ -8,26 +8,35 @@ This repository contains the scripts that have been used to compute the results 
 The repository contains the following directories:
 
 * compute_budget_terms
-The routines to compute global- and basin-mean estimates of all contributing processes.
+
+⋅⋅⋅The routines to compute global- and basin-mean estimates of all contributing processes.
 * compute_grd
-All routines to prepare and generate the GRD ensemble members.
+
+⋅⋅⋅All routines to prepare and generate the GRD ensemble members.
 * figures
-Scripts to save data in GMT-readable format.
+
+⋅⋅⋅Scripts to save data in GMT-readable format.
 * region_selection
-Scripts used to quality-check all the regions.
+
+⋅⋅⋅Scripts used to quality-check all the regions.
 * results
-Routines to compute all statistics.
+
+⋅⋅⋅Routines to compute all statistics.
 * tables
-Scripts to save data in excel tables.
+
+⋅⋅⋅Scripts to save data in excel tables.
 * tg_data
-Tide-gauge data processing.
+
+⋅⋅⋅Tide-gauge data processing.
 * virtual_station
-Virtual-station computations.
+
+⋅⋅⋅Virtual-station computations.
 * vlm
-Compute VLM from GPS and altimetry-TG.
+
+⋅⋅⋅Compute VLM from GPS and altimetry-TG.
 * GMT
 GMT scripts to plot all figures from the main text and supporting information. Get GMT here: https://github.com/GenericMappingTools/gmt. The plots use, and the scripts include some colormaps from:
-    --* Cynthia Brewer's ColorBrewer2 (http://colorbrewer2.org and http://soliton.vm.bytemark.co.uk/pub/cpt-city/jjg/cbcont/index.html)
-    --* Fabio Crameri (http://www.fabiocrameri.ch/colourmaps.php)
+    ⋅⋅* Cynthia Brewer's ColorBrewer2 (http://colorbrewer2.org and http://soliton.vm.bytemark.co.uk/pub/cpt-city/jjg/cbcont/index.html)
+    ⋅⋅* Fabio Crameri (http://www.fabiocrameri.ch/colourmaps.php)
 
 
