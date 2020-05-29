@@ -3,7 +3,7 @@
 
 Authors: Thomas Frederikse, Felix Landerer, Lambert Caron, Surendra Adhikari, David Parkes, Vincent W. Humphrey, Soenke Dangendorf, Peter Hogarth, Laure Zanna, Lijing Cheng, Yun-Hao Wu
 
-This repository contains the scripts that have been used to compute the results from the paper. Note that this set of scripts relies on many external libraries, such as SHTNS for spherical harmonics, and MIDAS for GPS trends.
+This repository contains the scripts that have been used to compute the results from the paper. Note that this set of scripts relies on many external libraries, such as shtools (https://shtools.oca.eu/shtools/public/) for spherical harmonics, and MIDAS (http://geodesy.unr.edu/MIDAS_release/) for GPS trends.
 
 The repository contains the following directories:
 
@@ -38,5 +38,9 @@ The repository contains the following directories:
 GMT scripts to plot all figures from the main text and supporting information. Get GMT here: https://github.com/GenericMappingTools/gmt. The plots use, and the scripts include some colormaps from:
   * Cynthia Brewer's ColorBrewer2 (http://colorbrewer2.org and http://soliton.vm.bytemark.co.uk/pub/cpt-city/jjg/cbcont/index.html)
   * Fabio Crameri (http://www.fabiocrameri.ch/colourmaps.php)
+
+ You can find a data set with the station list, VLM rates, resulting observed sea-level changes, the contributing processes, and more at https://dx.doi.org/10.5281/zenodo.3862995 
+
+ 
 
 
