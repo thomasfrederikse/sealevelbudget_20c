@@ -1,4 +1,4 @@
-# Data supplement for 'The causes of sea-level rise since 1900'
+# Scripts for 'The causes of sea-level rise since 1900'
 (c) 2020 All Rights Reserved
 
 Authors: Thomas Frederikse, Felix Landerer, Lambert Caron, Surendra Adhikari, David Parkes, Vincent W. Humphrey, Soenke Dangendorf, Peter Hogarth, Laure Zanna, Lijing Cheng, Yun-Hao Wu
@@ -41,6 +41,6 @@ GMT scripts to plot all figures from the main text and supporting information. G
 
  You can find a data set with the station list, VLM rates, resulting observed sea-level changes, the contributing processes, and more at https://dx.doi.org/10.5281/zenodo.3862995 
 
- 
+
 
 
