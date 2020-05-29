@@ -8,20 +8,28 @@ This repository contains the scripts that have been used to compute the results 
 The repository contains the following directories:
 
 * compute_budget_terms
+
    The routines to compute global- and basin-mean estimates of all contributing processes.
 * compute_grd
+
    All routines to prepare and generate the GRD ensemble members.
 * figures
+
    Scripts to save data in GMT-readable format.
 * region_selection
+
    Scripts used to quality-check all the regions.
 * results
+
    Routines to compute all statistics.
 * tables
+
    Scripts to save data in excel tables.
 * tg_data
+
    Tide-gauge data processing.
 * virtual_station
+
    Virtual-station computations.
 * vlm
 
