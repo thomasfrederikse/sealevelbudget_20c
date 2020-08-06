@@ -39,7 +39,9 @@ GMT scripts to plot all figures from the main text and supporting information. G
   * Cynthia Brewer's ColorBrewer2 (http://colorbrewer2.org and http://soliton.vm.bytemark.co.uk/pub/cpt-city/jjg/cbcont/index.html)
   * Fabio Crameri (http://www.fabiocrameri.ch/colourmaps.php)
 
- You can find a data set with the station list, VLM rates, resulting observed sea-level changes, the contributing processes, and more at https://dx.doi.org/10.5281/zenodo.3862995 
+The global sea-level curve and the components in NetCDF format can be obtained from NASA PO.DAAC:  https://doi.org/10.5067/GMSLT-FJPL1
+
+A data set with the station list, VLM rates, resulting observed sea-level changes, the contributing processes, and more is available from Zenodo: https://dx.doi.org/10.5281/zenodo.3862995 
 
 
 
