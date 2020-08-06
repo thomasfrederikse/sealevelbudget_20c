@@ -3,7 +3,9 @@
 
 Authors: Thomas Frederikse, Felix Landerer, Lambert Caron, Surendra Adhikari, David Parkes, Vincent W. Humphrey, Soenke Dangendorf, Peter Hogarth, Laure Zanna, Lijing Cheng, Yun-Hao Wu
 
-This repository contains the scripts that have been used to compute the results from the paper. Note that this set of scripts relies on many external libraries, such as shtools (https://shtools.oca.eu/shtools/public/) for spherical harmonics, and MIDAS (http://geodesy.unr.edu/MIDAS_release/) for GPS trends.
+This repository contains the scripts that have been used to compute the results from the paper 'The causes of sea-level rise since 1900', Nature, 2020 (https://doi.org/10.1038/s41586-020-2591-3) 
+
+. Note that this set of scripts relies on many external libraries, such as shtools (https://shtools.oca.eu/shtools/public/) for spherical harmonics, and MIDAS (http://geodesy.unr.edu/MIDAS_release/) for GPS trends.
 
 The repository contains the following directories:
 
@@ -41,7 +43,7 @@ GMT scripts to plot all figures from the main text and supporting information. G
 
 The global sea-level curve and the components in NetCDF format can be obtained from NASA PO.DAAC:  https://doi.org/10.5067/GMSLT-FJPL1
 
-A data set with the station list, VLM rates, resulting observed sea-level changes, the contributing processes, and more is available from Zenodo: https://dx.doi.org/10.5281/zenodo.3862995 
+A data set with the station list, VLM rates, resulting observed sea-level changes, the contributing processes, and more is available from Zenodo: https://doi.org/10.5281/zenodo.3862995 
 
 
 
