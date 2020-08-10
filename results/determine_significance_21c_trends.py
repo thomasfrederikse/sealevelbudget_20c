@@ -67,7 +67,7 @@ def estimate_sliding_trend_ensemble(ensemble):
     return (trend_ens)
 
 def determine_significance(trend_ens):
-    trend_diff = np.nanmax(trend_ens[:,99:],axis=1) - np.nanmax(trend_ens[:,:80],axis=1)
+    trend_diff = np.nanmax(trend_ens[:,99:],axis=1) - np.nanmax(trend_ens[:,:85],axis=1)
 
     trend_diff_bnd = np.zeros(3)
     trend_diff_bnd[0] = (settings['probability'] * trend_diff).sum()

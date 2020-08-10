@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 def main():
     set_settings()
     compute_stats()
-    save_data()
+    #save_data()
     return
 
 def set_settings():
@@ -19,8 +19,8 @@ def set_settings():
     settings = {}
     settings['dir_data'] = os.getenv('HOME') + '/Data/'
     settings['dir_budget'] = settings['dir_data'] + 'Budget_20c/'
-    settings['test_run_ICE6G_D'] = True
-    settings['num_ens'] = 100
+    settings['test_run_ICE6G_D'] = False
+    settings['num_ens'] = 5000
     settings['fn_steric_ensembles'] = settings['dir_budget'] + 'results/steric_basin_global_ens.npy'
     if settings['test_run_ICE6G_D']:
         settings['fn_gia_ensembles'] = settings['dir_budget'] + 'results/gia_basin_global_ens_ice6g.npy'
@@ -70,20 +70,28 @@ def compute_stats():
         stats['basin'][basin]['steric'] = compute_stats_indiv(steric_ensembles['basin'][basin][:settings['num_ens'], :],remove_baseline=True)
         for term in grd_ensembles['basin'][basin]:
             stats['basin'][basin]['grd_' + term] = compute_stats_indiv(grd_ensembles['basin'][basin][term][:settings['num_ens'], :],remove_baseline=True)
+        stats['basin'][basin]['grd_ice'] = compute_stats_indiv((grd_ensembles['basin'][basin]['glac']+grd_ensembles['basin'][basin]['GrIS']+grd_ensembles['basin'][basin]['AIS'])[:settings['num_ens']], remove_baseline=True)
+
         stats['basin'][basin]['gia'] = compute_stats_indiv(gia_ensembles['basin'][basin][:settings['num_ens']][:,np.newaxis]*time_gia,remove_baseline=True)
         stats['basin'][basin]['altimetry'] = compute_stats_indiv(alt_ensembles['basin'][basin][:settings['num_ens'], :],remove_baseline=True)
         stats['basin'][basin]['budget'] = compute_stats_indiv(steric_ensembles['basin'][basin][:settings['num_ens'], :]+grd_ensembles['basin'][basin]['total'][:settings['num_ens'], :]+gia_ensembles['basin'][basin][:settings['num_ens']][:,np.newaxis]*time_gia,remove_baseline=True)
         stats['basin'][basin]['diff'] = compute_stats_indiv(obs_ensembles['basin'][basin]['tg_full'][:settings['num_ens']]-steric_ensembles['basin'][basin][:settings['num_ens'], :]-grd_ensembles['basin'][basin]['total'][:settings['num_ens'], :]-gia_ensembles['basin'][basin][:settings['num_ens']][:,np.newaxis]*time_gia,remove_baseline=True)
+        stats['basin'][basin]['obs_steric'] = compute_stats_indiv(obs_ensembles['basin'][basin]['tg_full'][:settings['num_ens']]-steric_ensembles['basin'][basin][:settings['num_ens'], :]-gia_ensembles['basin'][basin][:settings['num_ens']][:,np.newaxis]*time_gia,remove_baseline=True)
 
     print('   Global')
     stats['global']['obs'] = compute_stats_indiv(obs_ensembles['global']['tg_full'][:settings['num_ens']],remove_baseline=True)
     stats['global']['steric'] = compute_stats_indiv(steric_ensembles['global'][:settings['num_ens'], :])
     for term in grd_ensembles['global']:
         stats['global']['grd_' + term] = compute_stats_indiv(grd_ensembles['global'][term][:settings['num_ens'], :])
+    stats['global']['grd_ice'] = compute_stats_indiv((grd_ensembles['global']['glac'] + grd_ensembles['global']['GrIS'] + grd_ensembles['global']['AIS'])[:settings['num_ens']], remove_baseline=True)
+
     stats['global']['altimetry'] = compute_stats_indiv(alt_ensembles['global'][:settings['num_ens'], :])
     stats['global']['budget'] = compute_stats_indiv(steric_ensembles['global'][:settings['num_ens'], :]+grd_ensembles['global']['total'][:settings['num_ens'], :])
     stats['global']['diff'] = compute_stats_indiv(obs_ensembles['global']['tg_full'][:settings['num_ens']]-steric_ensembles['global'][:settings['num_ens'], :]-grd_ensembles['global']['total'][:settings['num_ens'], :])
+    stats['global']['obs_steric'] = compute_stats_indiv(obs_ensembles['global']['tg_full'][:settings['num_ens']]-steric_ensembles['global'][:settings['num_ens'], :])
+
     return()
+
 
 def compute_stats_indiv(ensemble,remove_baseline=False):
     # ---------------------------
@@ -92,9 +100,9 @@ def compute_stats_indiv(ensemble,remove_baseline=False):
     # - Time series
     # - Sliding trends
     # - Linear trends over
-    #   * 1900-2016
-    #   * 1955-2016
-    #   * 1993-2016
+    #   * 1900-2018
+    #   * 1955-2018
+    #   * 1993-2018
     # ---------------------------
     global settings
     stats = {}
