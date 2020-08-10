@@ -39,7 +39,7 @@ The repository contains the following directories:
    All scripts to compute VLM trends from GPS and altimetry-TG records.
 * GMT
 
-GMT scripts to plot all figures from the main text and supporting information. Get GMT here: https://github.com/GenericMappingTools/gmt. The plots use, and the scripts include some colormaps from:
+   GMT scripts to plot all figures from the main text and supporting information. Get GMT here: https://github.com/GenericMappingTools/gmt. The plots use, and the scripts include some colormaps from:
   * Cynthia Brewer's ColorBrewer2 (http://colorbrewer2.org and http://soliton.vm.bytemark.co.uk/pub/cpt-city/jjg/cbcont/index.html)
   * Fabio Crameri (http://www.fabiocrameri.ch/colourmaps.php)
 
